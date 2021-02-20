@@ -47,7 +47,7 @@ class FluentTextStyle {
       color: FluentColors.gray.shade900,
       fontSize: 16,
       fontWeight: FontWeight.w400);
-
+// forIOS
   static TextStyle subhead = TextStyle(
       color: FluentColors.gray.shade900,
       fontSize: 15,
