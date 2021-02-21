@@ -1,5 +1,6 @@
 import 'package:fluent/design_system/colors.dart';
 import 'package:fluent/design_system/elevation.dart';
+import 'package:fluent/design_system/fluent_icons_outlined.dart';
 import 'package:fluent/design_system/typography.dart';
 import 'package:fluent/widgets/fluent_avatar.dart';
 import 'package:fluent/widgets/fluent_size.dart';
@@ -106,7 +107,21 @@ class FluentSearchAppBar extends PreferredSize {
                         child: Padding(
                             padding: EdgeInsets.only(left: 18),
                             child: Row(
-                              children: [accountSwitcher], //add a down chevron
+                              children: [
+                                Flexible(flex: 2, child: accountSwitcher),
+                                SizedBox(
+                                  width: 5,
+                                ),
+                                Flexible(
+                                  flex: 1,
+                                  child: Icon(
+                                    FluentIconsOutlined
+                                        .ios_chevron_down_outline,
+                                    size: 15,
+                                    color: FluentColors.white,
+                                  ),
+                                )
+                              ], //add a down chevron
                             )))
                   ],
                 ),

@@ -13,8 +13,9 @@ class FluentAvatar extends StatelessWidget {
     return Container(
       height: fluentSize.size.height,
       width: fluentSize.size.width,
-      decoration:
-          BoxDecoration(shape: BoxShape.circle, color: FluentColors.black),
+      decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          image: DecorationImage(image: AssetImage('assets/persona.png'))),
     );
   }
 }
