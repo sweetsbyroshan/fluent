@@ -2,8 +2,6 @@ import 'package:fluent/design_system/colors.dart';
 import 'package:fluent/design_system/elevation.dart';
 import 'package:fluent/design_system/fluent_icons_outlined.dart';
 import 'package:fluent/design_system/typography.dart';
-import 'package:fluent/widgets/fluent_avatar.dart';
-import 'package:fluent/widgets/fluent_size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 

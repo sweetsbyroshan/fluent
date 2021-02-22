@@ -31,7 +31,7 @@ class TestPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: FluentSearchAppBar(
-        // title: 'Title',
+        title: 'Title',
         searchLabel: 'Search',
         preffixIcon: Icon(
           FluentIconsFilled.ios_search,
@@ -41,7 +41,7 @@ class TestPage extends StatelessWidget {
           FluentIconsFilled.ios_chat,
           color: FluentColors.white,
         ),
-        accountSwitcher: FluentAvatar(fluentSize: FluentSize.SMALL),
+        // accountSwitcher: FluentAvatar(fluentSize: FluentSize.SMALL),
       ),
     );
   }
