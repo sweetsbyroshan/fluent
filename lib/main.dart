@@ -3,6 +3,9 @@ import 'package:fluent/widgets/fluent_size.dart';
 import 'package:flutter/material.dart';
 
 import 'design_system/colors.dart';
+import 'widgets/buttons/fluent_ios_outlined_button.dart';
+import 'widgets/buttons/fluent_ios_primary_button.dart';
+import 'widgets/buttons/fluent_ios_text_button.dart';
 import 'widgets/fluent_appbar.dart';
 import 'widgets/fluent_avatar.dart';
 import 'widgets/fluent_searchbar.dart';
@@ -42,6 +45,13 @@ class TestPage extends StatelessWidget {
           color: FluentColors.white,
         ),
         // accountSwitcher: FluentAvatar(fluentSize: FluentSize.SMALL),
+      ),
+      body: Center(
+        child: FluentIosTextButton(
+          text: 'Default',
+          onPressed: () {},
+          // disabled: true,
+        ),
       ),
     );
   }
