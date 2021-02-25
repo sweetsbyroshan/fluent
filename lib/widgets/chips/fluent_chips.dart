@@ -50,12 +50,14 @@ class _FluentChipsState extends State<FluentChips> {
 
   Widget defaultState() {
     return InkWell(
-      onLongPress: () {
-        setState(() {
-          widget.focused = true;
-        });
-      },
-      onTap: widget.onPressed,
+      onLongPress: widget.disabled != true
+          ? () {
+              setState(() {
+                widget.focused = true;
+              });
+            }
+          : false,
+      onTap: widget.disabled != true ? widget.onPressed : null,
       child: Container(
         constraints: BoxConstraints(
           maxHeight: 32,
@@ -85,12 +87,14 @@ class _FluentChipsState extends State<FluentChips> {
 
   Widget errorState() {
     return InkWell(
-      onLongPress: () {
-        setState(() {
-          widget.focused = true;
-        });
-      },
-      onTap: widget.onPressed,
+      onLongPress: widget.disabled != false
+          ? () {
+              setState(() {
+                widget.focused = true;
+              });
+            }
+          : null,
+      onTap: widget.disabled != true ? widget.onPressed : null,
       child: Container(
         constraints: BoxConstraints(
           maxHeight: 32,
@@ -121,12 +125,14 @@ class _FluentChipsState extends State<FluentChips> {
 
   Widget focusedState() {
     return InkWell(
-      onLongPress: () {
-        setState(() {
-          widget.focused = true;
-        });
-      },
-      onTap: widget.onPressed,
+      onLongPress: widget.disabled != true
+          ? () {
+              setState(() {
+                widget.focused = true;
+              });
+            }
+          : null,
+      onTap: widget.disabled != true ? widget.onPressed : null,
       child: Container(
         constraints: BoxConstraints(
           maxHeight: 32,

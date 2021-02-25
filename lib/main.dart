@@ -67,8 +67,8 @@ class TestPage extends StatelessWidget {
           text: 'Default Chip',
           onPressed: () {},
           persona: FluentAvatar(),
-          error: true,
-          // disabled: true,
+          // error: true,
+          disabled: true,
         ),
       ),
     );
