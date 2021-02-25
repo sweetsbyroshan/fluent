@@ -1,5 +1,5 @@
 import 'package:fluent/design_system/colors.dart';
-import 'package:fluent/widgets/fluent_size.dart';
+import 'package:fluent/design_system/fluent_size.dart';
 import 'package:flutter/widgets.dart';
 
 class FluentAvatar extends StatelessWidget {

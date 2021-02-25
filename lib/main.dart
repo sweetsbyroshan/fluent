@@ -1,15 +1,16 @@
 import 'package:fluent/design_system/fluent_icons_filled.dart';
 import 'package:fluent/design_system/fluent_icons_outlined.dart';
-import 'package:fluent/widgets/fluent_size.dart';
+import 'package:fluent/design_system/fluent_size.dart';
 import 'package:flutter/material.dart';
 
 import 'design_system/colors.dart';
 import 'widgets/buttons/fluent_ios_outlined_button.dart';
 import 'widgets/buttons/fluent_ios_primary_button.dart';
 import 'widgets/buttons/fluent_ios_text_button.dart';
-import 'widgets/fluent_appbar.dart';
+import 'widgets/appbar/fluent_appbar.dart';
+import 'widgets/chips/fluent_chips.dart';
 import 'widgets/fluent_avatar.dart';
-import 'widgets/fluent_searchbar.dart';
+import 'widgets/appbar/fluent_searchbar.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,6 +35,7 @@ class TestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Colors.black,
       appBar: FluentAppBar(
         title: 'Title',
         leftIcon: Icon(
@@ -61,9 +63,11 @@ class TestPage extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: FluentIosTextButton(
-          text: 'Default',
+        child: FluentChips(
+          text: 'Default Chip',
           onPressed: () {},
+          persona: FluentAvatar(),
+          error: true,
           // disabled: true,
         ),
       ),

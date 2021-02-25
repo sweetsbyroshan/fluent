@@ -5,7 +5,7 @@ import 'package:fluent/design_system/typography.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'fluent_avatar.dart';
+import '../fluent_avatar.dart';
 
 class FluentAppBar extends PreferredSize {
   final Widget avatar, leftIcon;
