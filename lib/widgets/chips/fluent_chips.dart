@@ -56,8 +56,8 @@ class _FluentChipsState extends State<FluentChips> {
                 widget.focused = true;
               });
             }
-          : false,
-      onTap: widget.disabled != true ? widget.onPressed : null,
+          : null,
+      onTap: widget.disabled == true ? widget.onPressed : null,
       child: Container(
         constraints: BoxConstraints(
           maxHeight: 32,
