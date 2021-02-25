@@ -1,4 +1,5 @@
 import 'package:fluent/design_system/fluent_icons_filled.dart';
+import 'package:fluent/design_system/fluent_icons_outlined.dart';
 import 'package:fluent/widgets/fluent_size.dart';
 import 'package:flutter/material.dart';
 
@@ -33,18 +34,31 @@ class TestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: FluentSearchAppBar(
+      appBar: FluentAppBar(
         title: 'Title',
-        searchLabel: 'Search',
-        preffixIcon: Icon(
-          FluentIconsFilled.ios_search,
+        leftIcon: Icon(
+          FluentIconsOutlined.android_person_outline,
           color: FluentColors.white,
         ),
-        suffixIcon: Icon(
-          FluentIconsFilled.ios_chat,
-          color: FluentColors.white,
-        ),
-        // accountSwitcher: FluentAvatar(fluentSize: FluentSize.SMALL),
+        isMenuOnly: true,
+        actions: [
+          IconButton(
+            icon: Icon(FluentIconsFilled.android_mail),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(FluentIconsFilled.android_mail),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(FluentIconsFilled.android_mail),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(FluentIconsFilled.android_mail),
+            onPressed: () {},
+          ),
+        ],
       ),
       body: Center(
         child: FluentIosTextButton(
