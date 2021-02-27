@@ -71,10 +71,12 @@ class TestPage extends StatelessWidget {
           child: FluentAndroidButton(
         text: 'Show Snackbar',
         onPressed: () {
-          FluentSnackbar.show(
-              text: 'testsnackbar',
-              scaffoldKey: testPage,
-              action: SnackBarAction(label: 'ACTION', onPressed: () {}));
+          FluentSnackbar.announcement(
+            text: 'testsnackbar',
+            actionText: 'ACTION',
+            fluentIcon: FluentIconsFilled.android_chevron_down,
+            scaffoldKey: testPage,
+          );
         },
       )),
     );
