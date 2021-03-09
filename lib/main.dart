@@ -3,6 +3,7 @@ import 'package:fluent/design_system/fluent_icons_outlined.dart';
 import 'package:fluent/design_system/fluent_size.dart';
 import 'package:fluent/design_system/typography.dart';
 import 'package:fluent/widgets/snackbar/fluent_snackbar.dart';
+import 'package:fluent/widgets/tabbar/fluent_tabbar.dart';
 import 'package:flutter/material.dart';
 
 import 'design_system/colors.dart';
@@ -65,6 +66,11 @@ class TestPage extends StatelessWidget {
             icon: Icon(FluentIconsFilled.android_mail),
             onPressed: () {},
           ),
+        ],
+      ),
+      bottomNavigationBar: BottomTabBar(
+        items: [
+          BottomTabBarItem(icon: FluentIconsFilled.ios_add, onPressed: () {})
         ],
       ),
       body: Center(
