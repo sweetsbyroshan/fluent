@@ -78,8 +78,11 @@ class TestPage extends StatelessWidget {
           child: FluentAndroidButton(
         text: 'Show Snackbar',
         onPressed: () {
-          IosNotificaiton.progress(
-              text: 'astagfirullah', scaffoldKey: testPage);
+          IosNotificaiton.toastIconedSubtitle(
+              iconData: FluentIconsFilled.android_arrow_left,
+              subtitle: 'mcstan',
+              text: 'astagfirullah',
+              scaffoldKey: testPage);
         },
       )),
     );
