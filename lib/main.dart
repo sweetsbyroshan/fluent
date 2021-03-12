@@ -2,6 +2,7 @@ import 'package:fluent/design_system/fluent_icons_filled.dart';
 import 'package:fluent/design_system/fluent_icons_outlined.dart';
 import 'package:fluent/design_system/fluent_size.dart';
 import 'package:fluent/design_system/typography.dart';
+import 'package:fluent/widgets/badges/ios_badges.dart';
 import 'package:fluent/widgets/notifications/ios_notification.dart';
 import 'package:fluent/widgets/snackbar/fluent_snackbar.dart';
 import 'package:fluent/widgets/tabbar/fluent_tabbar.dart';
@@ -75,16 +76,11 @@ class TestPage extends StatelessWidget {
         ],
       ),
       body: Center(
-          child: FluentAndroidButton(
-        text: 'Show Snackbar',
-        onPressed: () {
-          IosNotificaiton.toastIconedSubtitle(
-              iconData: FluentIconsFilled.android_arrow_left,
-              subtitle: 'mcstan',
-              text: 'astagfirullah',
-              scaffoldKey: testPage);
-        },
-      )),
+        child: Badge(
+          label: 'test badge',
+          onTap: () {},
+        ),
+      ),
     );
   }
 }
