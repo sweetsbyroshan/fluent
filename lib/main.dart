@@ -6,6 +6,8 @@ import 'package:fluent/widgets/badges/ios_badges.dart';
 import 'package:fluent/widgets/notifications/ios_notification.dart';
 import 'package:fluent/widgets/snackbar/fluent_snackbar.dart';
 import 'package:fluent/widgets/tabbar/fluent_tabbar.dart';
+import 'package:fluent/widgets/tooltip/fluent_tooltip.dart';
+import 'package:fluent/widgets/tooltip/tooltip_painter.dart';
 import 'package:flutter/material.dart';
 
 import 'design_system/colors.dart';
@@ -42,45 +44,43 @@ class TestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: testPage,
-      // backgroundColor: Colors.black,
-      appBar: FluentAppBar(
-        title: 'Title',
-        leftIcon: Icon(
-          FluentIconsOutlined.android_person_outline,
-          color: FluentColors.white,
+        key: testPage,
+        // backgroundColor: Colors.black,
+        appBar: FluentAppBar(
+          title: 'Title',
+          leftIcon: Icon(
+            FluentIconsOutlined.android_person_outline,
+            color: FluentColors.white,
+          ),
+          isMenuOnly: true,
+          actions: [
+            IconButton(
+              icon: Icon(FluentIconsFilled.android_mail),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(FluentIconsFilled.android_mail),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(FluentIconsFilled.android_mail),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(FluentIconsFilled.android_mail),
+              onPressed: () {},
+            ),
+          ],
         ),
-        isMenuOnly: true,
-        actions: [
-          IconButton(
-            icon: Icon(FluentIconsFilled.android_mail),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(FluentIconsFilled.android_mail),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(FluentIconsFilled.android_mail),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: Icon(FluentIconsFilled.android_mail),
-            onPressed: () {},
-          ),
-        ],
-      ),
-      bottomNavigationBar: BottomTabBar(
-        items: [
-          BottomTabBarItem(icon: FluentIconsFilled.ios_add, onPressed: () {})
-        ],
-      ),
-      body: Center(
-        child: Badge(
-          label: 'test badge',
-          onTap: () {},
+        bottomNavigationBar: BottomTabBar(
+          items: [
+            BottomTabBarItem(icon: FluentIconsFilled.ios_add, onPressed: () {})
+          ],
         ),
-      ),
-    );
+        body: FluentToolTip(
+          type: FluentToolType.Bottom,
+          text:
+              'asdasdasdadsasdasdasdasdasdasdasdasdasdadasdasdasdadsasdasdasdasdasdasdasdasdasdadasdasdasdadsasdasdasdasdasdasdasdasdasdad',
+        ));
   }
 }
