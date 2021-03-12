@@ -2,6 +2,7 @@ import 'package:fluent/design_system/fluent_icons_filled.dart';
 import 'package:fluent/design_system/fluent_icons_outlined.dart';
 import 'package:fluent/design_system/fluent_size.dart';
 import 'package:fluent/design_system/typography.dart';
+import 'package:fluent/widgets/notifications/ios_notification.dart';
 import 'package:fluent/widgets/snackbar/fluent_snackbar.dart';
 import 'package:fluent/widgets/tabbar/fluent_tabbar.dart';
 import 'package:flutter/material.dart';
@@ -77,12 +78,8 @@ class TestPage extends StatelessWidget {
           child: FluentAndroidButton(
         text: 'Show Snackbar',
         onPressed: () {
-          FluentSnackbar.announcement(
-            text: 'testsnackbar',
-            actionText: 'ACTION',
-            fluentIcon: FluentIconsFilled.android_chevron_down,
-            scaffoldKey: testPage,
-          );
+          IosNotificaiton.progress(
+              text: 'astagfirullah', scaffoldKey: testPage);
         },
       )),
     );
