@@ -44,6 +44,7 @@ class TestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white,
         key: testPage,
         // backgroundColor: Colors.black,
         appBar: FluentAppBar(
@@ -79,6 +80,7 @@ class TestPage extends StatelessWidget {
         ),
         body: FluentToolTip(
           type: FluentToolType.Bottom,
+          isAndroid: true,
           text:
               'asdasdasdadsasdasdasdasdasdasdasdasdasdadasdasdasdadsasdasdasdasdasdasdasdasdasdadasdasdasdadsasdasdasdasdasdasdasdasdasdad',
         ));
