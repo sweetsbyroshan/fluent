@@ -19,6 +19,7 @@ import 'widgets/appbar/fluent_appbar.dart';
 import 'widgets/chips/fluent_chips.dart';
 import 'widgets/fluent_avatar.dart';
 import 'widgets/appbar/fluent_searchbar.dart';
+import 'widgets/picker/datepicker.dart';
 
 void main() {
   runApp(MyApp());
@@ -78,11 +79,6 @@ class TestPage extends StatelessWidget {
             BottomTabBarItem(icon: FluentIconsFilled.ios_add, onPressed: () {})
           ],
         ),
-        body: FluentToolTip(
-          type: FluentToolType.Bottom,
-          isAndroid: true,
-          text:
-              'asdasdasdadsasdasdasdasdasdasdasdasdasdadasdasdasdadsasdasdasdasdasdasdasdasdasdadasdasdasdadsasdasdasdasdasdasdasdasdasdad',
-        ));
+        body: AndroidDatePicker());
   }
 }
