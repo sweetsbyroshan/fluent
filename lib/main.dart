@@ -13,6 +13,7 @@ import 'package:fluent/widgets/tooltip/tooltip_painter.dart';
 import 'package:flutter/material.dart';
 
 import 'design_system/colors.dart';
+import 'widgets/bottomnavbar/fluent_bottomnavbar.dart';
 import 'widgets/buttons/fluent_android_primary_button.dart';
 import 'widgets/buttons/fluent_ios_outlined_button.dart';
 import 'widgets/buttons/fluent_ios_primary_button.dart';
@@ -76,9 +77,9 @@ class TestPage extends StatelessWidget {
             ),
           ],
         ),
-        bottomNavigationBar: BottomTabBar(
+        bottomNavigationBar: BottomNavBar(
           items: [
-            BottomTabBarItem(
+            BottomNavBarItem(
                 icon: FluentIconsFilled.ios_add,
                 onPressed: () {
                   showDialog(
