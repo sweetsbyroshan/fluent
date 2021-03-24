@@ -14,10 +14,28 @@ class DateVertical extends StatelessWidget {
     bool isToday = dateTime.day == DateTime.now().day &&
         dateTime.month == DateTime.now().month &&
         dateTime.year == DateTime.now().year;
+    bool isYesterday = dateTime.day + 1 == DateTime.now().day &&
+        dateTime.day + 2 > DateTime.now().day &&
+        dateTime.month == DateTime.now().month &&
+        dateTime.year == DateTime.now().year;
+    bool isTommorrow = dateTime.day - 1 == DateTime.now().day &&
+        dateTime.day - 2 < DateTime.now().day &&
+        dateTime.month == DateTime.now().month &&
+        dateTime.year == DateTime.now().year;
+
     return Container(
       constraints: BoxConstraints(minHeight: 48),
       child: Text(
-        DateFormat.E().addPattern(',').add_MMMd().format(dateTime),
+        isYesterday
+            ? 'Yesterday'
+            : isToday
+                ? 'Today'
+                : isTommorrow
+                    ? 'Tomorrow'
+                    : DateFormat.E()
+                        .addPattern(',')
+                        .add_MMMd()
+                        .format(dateTime),
         textAlign: TextAlign.center,
         style: FluentTextStyle.heading.copyWith(
             color: isToday == true ? FluentColors.blue : FluentColors.black),

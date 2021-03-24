@@ -10,8 +10,12 @@ class DateWidget extends StatelessWidget {
   DateWidget({this.fDateTime, this.isSelected = false});
   @override
   Widget build(BuildContext context) {
+    bool isToday = fDateTime.day == DateTime.now().day &&
+        fDateTime.month == DateTime.now().month &&
+        fDateTime.year == DateTime.now().year;
     return Container(
       decoration: BoxDecoration(
+          color: FluentColors.white,
           border:
               Border(bottom: BorderSide(width: .5, color: FluentColors.gray))),
       child: Container(
@@ -19,14 +23,19 @@ class DateWidget extends StatelessWidget {
         decoration: BoxDecoration(
           color: isSelected == true
               ? FluentColors.blue
-              : fDateTime.month % 2 != 0
-                  ? FluentColors.white
-                  : FluentColors.gray.shade25,
-          shape: isSelected == true ? BoxShape.circle : BoxShape.rectangle,
+              : (isSelected != true && isToday == true)
+                  ? FluentColors.blueTint.shade30
+                  : fDateTime.month % 2 != 0
+                      ? FluentColors.white
+                      : FluentColors.gray.shade25,
+          shape: isSelected == true
+              ? BoxShape.circle
+              : (isSelected != true && isToday == true)
+                  ? BoxShape.rectangle
+                  : BoxShape.rectangle,
         ),
         alignment: Alignment.center,
         child: Container(
-          decoration: BoxDecoration(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -39,7 +48,9 @@ class DateWidget extends StatelessWidget {
                 style: FluentTextStyle.subhead.copyWith(
                     color: isSelected == true
                         ? FluentColors.white
-                        : FluentColors.black),
+                        : (isSelected != true && isToday == true)
+                            ? FluentColors.blue
+                            : FluentColors.black),
               ),
             ],
           ),

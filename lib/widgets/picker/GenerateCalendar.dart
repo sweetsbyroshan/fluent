@@ -1,8 +1,12 @@
 class GenerateCalendar {
   static List<DateTime> CALENDAR = <DateTime>[];
+  static int todayIndex = 0;
   GenerateCalendar() {
     dayCount();
 
+    todayIndex = (DateTime.now()
+            .difference(new DateTime(DateTime.now().year, 1, 1, 0, 0)))
+        .inDays;
     for (var i = 1; i <= 12; i++) {
       if ([1, 3, 5, 7, 8, 10, 12].contains(i)) {
         // 31 days
