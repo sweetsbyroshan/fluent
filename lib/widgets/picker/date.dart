@@ -41,7 +41,13 @@ class DateWidget extends StatelessWidget {
             children: [
               Visibility(
                 visible: fDateTime.day == 1,
-                child: Text(DateFormat.MMM().format(fDateTime)),
+                child: Text(DateFormat.MMM().format(fDateTime),
+                    style: FluentTextStyle.subhead.copyWith(
+                        color: isSelected == true
+                            ? FluentColors.white
+                            : (isSelected != true && isToday == true)
+                                ? FluentColors.blue
+                                : FluentColors.black)),
               ),
               Text(
                 fDateTime.day.toString(),

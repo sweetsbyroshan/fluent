@@ -78,13 +78,30 @@ class TestPage extends StatelessWidget {
         ),
         bottomNavigationBar: BottomTabBar(
           items: [
-            BottomTabBarItem(icon: FluentIconsFilled.ios_add, onPressed: () {})
+            BottomTabBarItem(
+                icon: FluentIconsFilled.ios_add,
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (c) => Scaffold(
+                            backgroundColor: Colors.transparent,
+                            body: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  AndroidDatePicker(
+                                    onDateSelected: (DateTime dateTime) {
+                                      print(dateTime.toString());
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ));
+                })
           ],
         ),
-        body: AndroidDatePicker(
-          onDateSelected: (DateTime dateTime) {
-            print(dateTime.toString());
-          },
-        ));
+        body: Container());
   }
 }
