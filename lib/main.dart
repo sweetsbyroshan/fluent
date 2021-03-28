@@ -78,7 +78,96 @@ class TestPage extends StatelessWidget {
           ],
         ),
         bottomNavigationBar: BottomNavBar(
+          currentIndex: 0,
           items: [
+            BottomNavBarItem(
+                icon: FluentIconsFilled.ios_add,
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (c) => Scaffold(
+                            backgroundColor: Colors.transparent,
+                            body: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  AndroidDatePicker(
+                                    onDateSelected: (DateTime dateTime) {
+                                      print(dateTime.toString());
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ));
+                }),
+            BottomNavBarItem(
+                icon: FluentIconsFilled.ios_add,
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (c) => Scaffold(
+                            backgroundColor: Colors.transparent,
+                            body: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  AndroidDatePicker(
+                                    onDateSelected: (DateTime dateTime) {
+                                      print(dateTime.toString());
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ));
+                }),
+            BottomNavBarItem(
+                icon: FluentIconsFilled.ios_add,
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (c) => Scaffold(
+                            backgroundColor: Colors.transparent,
+                            body: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  AndroidDatePicker(
+                                    onDateSelected: (DateTime dateTime) {
+                                      print(dateTime.toString());
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ));
+                }),
+            BottomNavBarItem(
+                icon: FluentIconsFilled.ios_add,
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (c) => Scaffold(
+                            backgroundColor: Colors.transparent,
+                            body: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  AndroidDatePicker(
+                                    onDateSelected: (DateTime dateTime) {
+                                      print(dateTime.toString());
+                                    },
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ));
+                }),
             BottomNavBarItem(
                 icon: FluentIconsFilled.ios_add,
                 onPressed: () {
