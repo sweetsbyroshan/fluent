@@ -23,6 +23,7 @@ import 'widgets/appbar/fluent_appbar.dart';
 import 'widgets/chips/fluent_chips.dart';
 import 'widgets/fluent_avatar.dart';
 import 'widgets/appbar/fluent_searchbar.dart';
+import 'widgets/listtile/action_tile.dart';
 import 'widgets/listtile/menu_tile.dart';
 import 'widgets/picker/datepicker.dart';
 
@@ -195,13 +196,10 @@ class TestPage extends StatelessWidget {
           ],
         ),
         body: Center(
-            child: MenuTile(
-          color: FluentColors.blue,
-          onChanged: (_) {},
-          leading: FluentIconsOutlined.android_flag_outline,
-          title: 'Title',
-          groupValue: false,
-          value: true,
+            child: ActionTile(
+          title: Text('title'),
+          action: () {},
+          actionLabel: 'Action',
         )));
   }
 }
