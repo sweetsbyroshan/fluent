@@ -197,8 +197,13 @@ class TestPage extends StatelessWidget {
         ),
         body: Center(
             child: ActionTile(
-          title: Text('title'),
+          title: Text(
+            'title',
+            style: FluentTextStyle.button1,
+          ),
           action: () {},
+          actionType: ActionType.Custom,
+          trailing: Icon(FluentIconsFilled.android_arrow_left),
           actionLabel: 'Action',
         )));
   }
