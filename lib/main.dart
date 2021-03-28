@@ -23,6 +23,7 @@ import 'widgets/appbar/fluent_appbar.dart';
 import 'widgets/chips/fluent_chips.dart';
 import 'widgets/fluent_avatar.dart';
 import 'widgets/appbar/fluent_searchbar.dart';
+import 'widgets/listtile/command_tile.dart';
 import 'widgets/picker/datepicker.dart';
 
 void main() {
@@ -194,10 +195,11 @@ class TestPage extends StatelessWidget {
           ],
         ),
         body: Center(
-            child: FluentCircularProgressIndicator(
-          size: FluentSize.LARGE,
-          label: 'asdasdasdasdasas',
-          indicatorType: IndicatorType.HUD,
+            child: CommandTile(
+          color: FluentColors.blue,
+          onTap: () {},
+          title: 'Title',
+          leading: FluentIconsFilled.android_play,
         )));
   }
 }
