@@ -6,6 +6,7 @@ import 'package:fluent/widgets/badges/ios_badges.dart';
 import 'package:fluent/widgets/notifications/ios_notification.dart';
 import 'package:fluent/widgets/picker/date.dart';
 import 'package:fluent/widgets/picker/date_vertical.dart';
+import 'package:fluent/widgets/progress_indicators/fluent_progress_indicators.dart';
 import 'package:fluent/widgets/snackbar/fluent_snackbar.dart';
 import 'package:fluent/widgets/tabbar/fluent_tabbar.dart';
 import 'package:fluent/widgets/tooltip/fluent_tooltip.dart';
@@ -192,6 +193,11 @@ class TestPage extends StatelessWidget {
                 })
           ],
         ),
-        body: Container());
+        body: Center(
+            child: FluentCircularProgressIndicator(
+          size: FluentSize.LARGE,
+          label: 'asdasdasdasdasas',
+          indicatorType: IndicatorType.HUD,
+        )));
   }
 }
