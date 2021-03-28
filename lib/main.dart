@@ -3,6 +3,7 @@ import 'package:fluent/design_system/fluent_icons_outlined.dart';
 import 'package:fluent/design_system/fluent_size.dart';
 import 'package:fluent/design_system/typography.dart';
 import 'package:fluent/widgets/badges/ios_badges.dart';
+import 'package:fluent/widgets/navbar/fluent_search_navbar.dart';
 import 'package:fluent/widgets/notifications/ios_notification.dart';
 import 'package:fluent/widgets/picker/date.dart';
 import 'package:fluent/widgets/picker/date_vertical.dart';
@@ -25,6 +26,7 @@ import 'widgets/fluent_avatar.dart';
 import 'widgets/appbar/fluent_searchbar.dart';
 import 'widgets/listtile/action_tile.dart';
 import 'widgets/listtile/menu_tile.dart';
+import 'widgets/navbar/fluent_navbar.dart';
 import 'widgets/picker/datepicker.dart';
 
 void main() {
@@ -54,31 +56,10 @@ class TestPage extends StatelessWidget {
         backgroundColor: Colors.white,
         key: testPage,
         // backgroundColor: Colors.black,
-        appBar: FluentAppBar(
+        appBar: FluentSearchNavBar(
           title: 'Title',
-          leftIcon: Icon(
-            FluentIconsOutlined.android_person_outline,
-            color: FluentColors.white,
-          ),
-          isMenuOnly: true,
-          actions: [
-            IconButton(
-              icon: Icon(FluentIconsFilled.android_mail),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(FluentIconsFilled.android_mail),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(FluentIconsFilled.android_mail),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(FluentIconsFilled.android_mail),
-              onPressed: () {},
-            ),
-          ],
+          searchLabel: 'Search',
+          style: FluentNavbarStyle.Shy,
         ),
         bottomNavigationBar: BottomNavBar(
           currentIndex: 0,

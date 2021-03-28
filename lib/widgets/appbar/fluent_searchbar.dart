@@ -52,6 +52,8 @@ class FluentSearchAppBar extends PreferredSize {
                       height: 40,
                       child: TextFormField(
                           decoration: InputDecoration(
+                              contentPadding:
+                                  EdgeInsets.symmetric(horizontal: 4),
                               prefixIcon: preffixIcon != null
                                   ? Padding(
                                       padding: EdgeInsets.symmetric(
@@ -88,6 +90,8 @@ class FluentSearchAppBar extends PreferredSize {
                         height: 40,
                         child: TextFormField(
                             decoration: InputDecoration(
+                                contentPadding:
+                                    EdgeInsets.symmetric(horizontal: 4),
                                 prefixIcon:
                                     preffixIcon != null ? preffixIcon : null,
                                 suffixIcon:
